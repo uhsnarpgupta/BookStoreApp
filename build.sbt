@@ -10,8 +10,9 @@ javacOptions ++= Seq(
   "-encoding", "UTF-8",
   "-parameters",
   "-Xlint:unchecked",
-  "-Xlint:deprecation",
-  "-Werror"
+  "-Xlint:deprecation"
+  //,"-Werror"
+
 )
 
 crossScalaVersions := Seq("2.11.12", "2.12.7")

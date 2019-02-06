@@ -2,14 +2,7 @@
 @import play.data.Form
 
 @(bookForm : Form[Book])
-
-<html>
-    <head>
-        <title>
-            Edit Book
-        </title>
-    </head>
-    <body>
+    @layout("Edit Book"){
         <h1> Edit Book</h1>
         @helper.form(action=routes.BooksController.update()){
             @helper.inputText(bookForm("id"))
@@ -19,7 +12,5 @@
 
             <input type="submit" value="Edit Book">
         }
-        <form action="/books/create" method="post">
-        </form>
-    </body>
-</html>
+        <form action="/books/create" method="post"/>
+    }
